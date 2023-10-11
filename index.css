@@ -75,15 +75,42 @@ body {
     max-width: 1400px;
     margin-left: auto;
     margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
 }
 
-.company-info h2 {
-    margin-top: 0;
-}
+.block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .text {
+    flex: 1;
+  }
+  
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    background-color: #1a1a1a;
+    font-size: 60px;
+    margin-left: 36px;
+  }
 
-.company-info p {
-    margin-bottom: 10px;
-}
+  @media (max-width: 768px) {
+    .block {
+      flex-direction: column;
+    }
+  }
 
 footer {
     background-color: #333;
@@ -92,4 +119,48 @@ footer {
     bottom: 0;
     width: 100%;
     position: fixed;
+}
+
+.header {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+  
+.header h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+  
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+  
+.signup-button,
+.products-button {
+    padding: 0.5rem 1rem;
+    border: solid 4px;
+    border-color: #1a1a1a;
+    border-radius: 2rem;
+    background-color: #eb7e02;
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.signup-button:hover,
+.products-button:hover {
+    background-color: #333;
+    color: #fff;
 }
